@@ -1,8 +1,6 @@
-ARG COG_REPO
-ARG COG_MODEL
-ARG COG_VERSION
+ARG COG_VERSION=42865da4d3daf5f608864f35448603693c3feef833a942679f38ba21c5564a25
 
-FROM r8.im/${COG_REPO}/${COG_MODEL}@sha256:${COG_VERSION}
+FROM r8.im/7dof-ai/expression-editor@sha256:${COG_VERSION}
 
 # Install necessary packages and Python 3.10
 RUN apt-get update && apt-get upgrade -y && \
